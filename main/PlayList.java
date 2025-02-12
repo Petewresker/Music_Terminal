@@ -4,9 +4,11 @@ import java.util.ArrayList;
 
 public class PlayList {
     private ArrayList<MusicFile> songs;
+    private String Genre;
 
-    public PlayList() {
+    public PlayList(String Genre) {
         songs = new ArrayList<>();
+        this.Genre = Genre;
     }
 
     public void addSong(MusicFile song) {
@@ -15,14 +17,6 @@ public class PlayList {
 
     public void removeSong(MusicFile song) {
         songs.remove(song);
-    }
-
-    public MusicFile getNextSong(int index) {
-        if (index < songs.size()) {
-            return songs.get(index);
-        } else {
-            return null;
-        }
     }
 
     public void showPlaylist() {
@@ -37,5 +31,9 @@ public class PlayList {
 
     public MusicFile getSong(int index) {
         return songs.get(index);
+    }
+
+    public String getGenre(){
+        return Genre;
     }
 }

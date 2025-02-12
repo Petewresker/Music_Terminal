@@ -1,22 +1,12 @@
 package main;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 
 public class App {
 
     private SongManager songManager;
-    private int Choice;
-
-    public App(){
-        this.songManager = new SongManager();
-        addSong();
-    }
-
-    private void addSong(){
-        songManager.addSongToPlaylist("resource/Last_Christmas.wav", "Last Christmas", "Wham!");
-        songManager.addSongToPlaylist("resource/Music.wav", "BIRDS OF A FEATHER", "Billies Elish");
-        songManager.addSongToPlaylist("resource/Music.wav", "stay", "Interstallar");
-    }
     
 
     public void Start(){
@@ -41,10 +31,11 @@ public class App {
             System.out.println("3. Instruction Manaul");
 
             System.out.print("Which one do you prefer : ");
-            Choice = scanner.nextInt();
+            int Choice = scanner.nextInt();
 
             switch (Choice) {
                 case 1:
+                    songManager.DisplayGenre();
                     songManager.Process();
                     break;
                 case 2:
@@ -55,7 +46,13 @@ public class App {
                     break;
             }
         }
+        
+
+
     }
 
+    public void setTrack(PlayList[] playList){
+        songManager = new SongManager(playList);
+    }
 
 }
