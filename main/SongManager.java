@@ -38,7 +38,8 @@ public class SongManager {
     if(songIndex >= 1 && songIndex < playList.getSize()){
         MusicFile song = playList.getSong(songIndex - 1);
         System.out.println("Now Playing "+song.getTitle() +" By "+ song.getArtist());
-        JOptionPane.showMessageDialog(null, "Press ok to stop.");
+        playsong(song.getFilepath());
+        JOptionPane.showMessageDialog(null, "Press ok to stop Playing.");
 
     }else{
         clearScreen();

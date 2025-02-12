@@ -13,8 +13,8 @@ public class App {
     }
 
     private void addSong(){
-        songManager.addSongToPlaylist("resource/Music.wav", "Time & Life", "Mitty");
-        songManager.addSongToPlaylist("resource/Music.wav", "SkyLab Plan", "Daniel Pimberton");
+        songManager.addSongToPlaylist("resource/Last_Christmas.wav", "Last Christmas", "Wham!");
+        songManager.addSongToPlaylist("resource/Music.wav", "BIRDS OF A FEATHER", "Billies Elish");
         songManager.addSongToPlaylist("resource/Music.wav", "stay", "Interstallar");
     }
     
@@ -49,7 +49,7 @@ public class App {
                     break;
                 case 2:
                     System.out.println("Closed Program....Bye ^-^");
-                    scanner.close();
+                    System.exit(0);
                     break;
                 default:
                     break;
